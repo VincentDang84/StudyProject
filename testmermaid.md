@@ -1,6 +1,5 @@
 flowchart LR
-    classDef bigFont font-size:30px,font-weight:bold;
-
+   
     %% ======================
     %% Data Collection Module
     %% ======================
@@ -101,6 +100,8 @@ flowchart LR
     %% ======================
     %% Styling
     %% ======================
+    classDef bigFont font-size:30px,font-weight:bold;
+
     class DCH,EH bigFont
     class D4,DC1,DC2,DC3,A,B,B1,B2,C,C1,C2,C3,D,D1,D2,D3,S,E1,E2,E3,E4,E5,E6,E7,E8,E9 bigFont
 
