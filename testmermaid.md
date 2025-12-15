@@ -1,17 +1,31 @@
+# Mèo Béo – Research Proposal
+
+## Research Methodology Flow
+
+```mermaid
+
 flowchart LR
-    subgraph DC["Data Collection Module"]
+    classDef bigFont font-size:30px,font-weight:bold;
+
+    %% ======================
+    %% Data Collection Module
+    %% ======================
+    subgraph DC[ ]
         direction TB
         DCH["Data Collection"]
-        DC1["Secondary Data_Industry Report Data"]
-        DC2["Mixed Data_Competitor Benchmarking"]
-        DC3["Primary Data_Questionnaire Survey"]
+        DC1["Secondary Data<br/>Industry Report Data"]
+        DC2["Mixed Data<br/>Competitor Benchmarking"]
+        DC3["Primary Data<br/>Questionnaire Survey"]
 
         DCH --> DC1
         DCH --> DC2
         DCH --> DC3
     end
 
-    subgraph A0["Research & Analysis Module"]
+    %% ======================
+    %% Research & Analysis Module
+    %% ======================
+    subgraph A0[ ]
         direction LR
 
         A["Data Analysis"]
@@ -47,10 +61,16 @@ flowchart LR
         D --> D4
     end
 
+    %% ======================
+    %% Data feeds into Analysis
+    %% ======================
     DC1 --> A
     DC2 --> A
     DC3 --> A
-    
+
+    %% ======================
+    %% Strategic Synthesis Layer
+    %% ======================
     S["SWOT Strategic Analysis"]
 
     B1 --> S
@@ -63,6 +83,9 @@ flowchart LR
     D3 --> S
     D4 --> S
 
+    %% ======================
+    %% Lean BMC Module
+    %% ======================
     subgraph E0["Lean BMC Module"]
         direction LR
         EH["Lean Business Model Canvas"]
@@ -75,14 +98,13 @@ flowchart LR
         E7["Cost Structure"]
         E8["Key Metrics"]
         E9["Unfair Advantage"]
-
-        EH --> E1 --> E2 --> E3 --> E4 --> E5 --> E6 --> E7 --> E8 --> E9
     end
 
-    S --> EH
+    S --> E0
 
-    classDef bigFont font-size:30px,font-weight:bold;
-
+    %% ======================
+    %% Styling
+    %% ======================
     class DCH,EH bigFont
     class D4,DC1,DC2,DC3,A,B,B1,B2,C,C1,C2,C3,D,D1,D2,D3,S,E1,E2,E3,E4,E5,E6,E7,E8,E9 bigFont
 
@@ -120,3 +142,5 @@ flowchart LR
     style E7 fill:#FFFFFF,stroke:#1565C0,stroke-width:2px
     style E8 fill:#FFFFFF,stroke:#1565C0,stroke-width:2px
     style E9 fill:#FFFFFF,stroke:#1565C0,stroke-width:2px
+
+
