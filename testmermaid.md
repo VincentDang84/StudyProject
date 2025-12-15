@@ -1,23 +1,16 @@
 flowchart LR
-   
-    %% ======================
-    %% Data Collection Module
-    %% ======================
     subgraph DC["Data Collection Module"]
         direction TB
         DCH["Data Collection"]
-        DC1["Secondary Data<br/>Industry Report Data"]
-        DC2["Mixed Data<br/>Competitor Benchmarking"]
-        DC3["Primary Data<br/>Questionnaire Survey"]
+        DC1["Secondary Data_Industry Report Data"]
+        DC2["Mixed Data_Competitor Benchmarking"]
+        DC3["Primary Data_Questionnaire Survey"]
 
         DCH --> DC1
         DCH --> DC2
         DCH --> DC3
     end
 
-    %% ======================
-    %% Research & Analysis Module
-    %% ======================
     subgraph A0["Research & Analysis Module"]
         direction LR
 
@@ -54,16 +47,10 @@ flowchart LR
         D --> D4
     end
 
-    %% ======================
-    %% Data feeds into Analysis
-    %% ======================
     DC1 --> A
     DC2 --> A
     DC3 --> A
-
-    %% ======================
-    %% Strategic Synthesis Layer
-    %% ======================
+    
     S["SWOT Strategic Analysis"]
 
     B1 --> S
@@ -76,9 +63,6 @@ flowchart LR
     D3 --> S
     D4 --> S
 
-    %% ======================
-    %% Lean BMC Module
-    %% ======================
     subgraph E0["Lean BMC Module"]
         direction LR
         EH["Lean Business Model Canvas"]
@@ -97,9 +81,6 @@ flowchart LR
 
     S --> EH
 
-    %% ======================
-    %% Styling
-    %% ======================
     classDef bigFont font-size:30px,font-weight:bold;
 
     class DCH,EH bigFont
